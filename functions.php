@@ -14,7 +14,7 @@ if(isset($_POST['signup'])){
     $password = md5($password);
 
 
-    $checkEmail = "SELECT * FROM users WHERE email = '$email";
+    $checkEmail = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($checkEmail);
     
     if($result->num_rows > 0){
@@ -33,9 +33,9 @@ if(isset($_POST['signup'])){
 }
 
 // signin function
-if(isset($_POST[''])){
+if(isset($_POST['signin'])){
     $email = $_POST['email'];
-    $password = $_POST['password']
+    $password = $_POST['password'];
     $password = md5($password);
 
     $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
@@ -44,7 +44,7 @@ if(isset($_POST[''])){
     if($query_run->num_rows > 0){        
         $row = $query_run->fetch_assoc();
         $_SESSION['email'] = $row['email'];
-        header("Location: home.php");
+        header("location: home.php");
         exit(0);
     }else{
         echo "Not found, Incorrect email or password";
