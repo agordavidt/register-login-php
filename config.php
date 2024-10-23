@@ -5,10 +5,12 @@ $user = "root";
 $pws = "";
 $db = "superdb";
 
+
+
 $conn = new mysqli($host,$user,$pass,$db);
 
-if(conn->connect_error){
+if($conn->connect_error){
     echo "Failed to connect DB".$conn->connect_error;
 }
 
-?>
+

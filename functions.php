@@ -47,7 +47,7 @@ if(isset($_POST['signin'])){
         header("location: home.php");
         exit(0);
     }else{
-        echo "Not found, Incorrect email or password";
+        echo "Incorrect email or password";
     }
 }
 

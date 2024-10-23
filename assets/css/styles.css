@@ -124,14 +124,14 @@ input:focus~label,input:not(:placeholder-shown)~label{
     margin-top: 0.9rem;
     font-weight: bold;
 } */
-.link {
+.links {
     color: rgb(125,125,235);
     border: none;
     background-color: transparent;
     font-size: 1rem;
     font-weight: bold;
 }
-.link a:hover{
+.links a:hover{
     text-decoration: underline;
     color: #0010dd;
 }
